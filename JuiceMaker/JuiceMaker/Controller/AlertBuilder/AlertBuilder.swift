@@ -16,7 +16,18 @@ struct AlertProduct {
     var cancelHandler: (() -> Void)?
 }
 
-final class AlertBuilder {
+protocol AlertBuilderable {
+    init(viewController: UIViewController)
+    func setTitle(_ title: String) -> AlertBuilderable
+    func setConfirmTitle(_ confirmTitle: String) -> AlertBuilderable
+    func setMessage(_ message: String) -> AlertBuilderable
+    func setCancelTitle(_ cancelTitle: String) -> AlertBuilderable
+    func setConfirmHandler(_ confirmHandler: @escaping (() -> Void)) -> AlertBuilderable
+    func setCancelHandler(_ cancelHandler: @escaping (() -> Void)) -> AlertBuilderable
+    func showAlert()
+}
+
+final class AlertBuilder: AlertBuilderable {
     private weak var viewController: UIViewController?
     private var product = AlertProduct()
 
@@ -24,32 +35,32 @@ final class AlertBuilder {
         self.viewController = viewController
     }
 
-    func setTitle(_ title: String) -> AlertBuilder {
+    func setTitle(_ title: String) -> AlertBuilderable {
         product.title = title
         return self
     }
 
-    func setConfirmTitle(_ confirmTitle: String) -> AlertBuilder {
+    func setConfirmTitle(_ confirmTitle: String) -> AlertBuilderable {
         product.confirmTitle = confirmTitle
         return self
     }
 
-    func setMessage(_ message: String) -> AlertBuilder {
+    func setMessage(_ message: String) -> AlertBuilderable {
         product.message = message
         return self
     }
 
-    func setCancelTitle(_ cancelTitle: String) -> AlertBuilder {
+    func setCancelTitle(_ cancelTitle: String) -> AlertBuilderable {
         product.cancelTitle = cancelTitle
         return self
     }
 
-    func setConfirmHandler(_ confirmHandler: @escaping (() -> Void)) -> AlertBuilder {
+    func setConfirmHandler(_ confirmHandler: @escaping (() -> Void)) -> AlertBuilderable {
         product.confirmHandler = confirmHandler
         return self
     }
 
-    func setCancelHandler(_ cancelHandler: @escaping (() -> Void)) -> AlertBuilder {
+    func setCancelHandler(_ cancelHandler: @escaping (() -> Void)) -> AlertBuilderable {
         product.cancelHandler = cancelHandler
         return self
     }
