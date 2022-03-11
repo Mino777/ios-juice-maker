@@ -1,10 +1,6 @@
-# 쥬스 메이커 프로젝트 저장소 
+# 쥬스메이커
 > 프로젝트 기간 2022.02.21 ~ 2022.03.11 </br>
 팀원 : [@Tiana](https://github.com/Kim-TaeHyun-A) [@마이노](https://github.com/Mino777) / 리뷰어 : [@린생](https://github.com/jungseungyeo)
-
-## 프로젝트 소개
-
-야곰과 함께 음료수를 만듭시다. 
 
 ## 키워드
 - Initialization
@@ -12,6 +8,11 @@
 - Nested Types
 - Type Casting
 - Error Handling
+- Protocol
+- Dependency Injection
+    - Composition Root
+- Builder Pattern
+- Observer Pattern
 
 ---
 
