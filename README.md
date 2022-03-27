@@ -2,6 +2,12 @@
 > 프로젝트 기간 2022.02.21 ~ 2022.03.11 </br>
 팀원 : [@Tiana](https://github.com/Kim-TaeHyun-A) [@마이노](https://github.com/Mino777) / 리뷰어 : [@린생](https://github.com/jungseungyeo)
 
+---
+
+<img src = "https://user-images.githubusercontent.com/54234176/160284477-0d719e46-ce4c-4b5d-bb53-748b81ef2c49.gif" width="500px">
+
+---
+
 ## 키워드
 - Initialization
 - Access Control
