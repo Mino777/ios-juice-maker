@@ -8,6 +8,11 @@
 
 ---
 
+## 개발환경 및 라이브러리
+[![swift](https://img.shields.io/badge/swift-5.6-orange)]()
+[![xcode](https://img.shields.io/badge/Xcode-13.3-blue)]()
+---
+
 ## 키워드
 - Initialization
 - Access Control
